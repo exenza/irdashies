@@ -5,6 +5,12 @@ name: Windows Test Build
 # the branch to build from the "Use workflow from" dropdown.
 on:
   workflow_dispatch: {}
+  # workflow_dispatch only becomes triggerable via the API/UI once this file
+  # exists on the default branch, which we don't want to touch for a
+  # test-only workflow - so also fire on pushes to this branch directly.
+  push:
+    branches:
+      - test/combined-preview
 
 permissions:
   contents: read
