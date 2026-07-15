@@ -89,6 +89,12 @@ export const widgetItems: MenuItem[] = [
     widgetType: 'fuel',
   },
   {
+    to: '/settings/fuelsharing',
+    path: '/fuelsharing',
+    label: 'Fuel Sharing',
+    widgetType: 'fuelsharing',
+  },
+  {
     to: '/settings/garagecover',
     path: '/garagecover',
     label: 'Garage Cover',

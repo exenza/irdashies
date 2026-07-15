@@ -23,6 +23,7 @@ export const WIDGET_NAMES: Record<WidgetId, string> = {
   flag: 'Flag',
   twitchchat: 'Twitch Chat',
   laptimelog: 'Lap Timer',
+  fuelsharing: 'Fuel Sharing',
   infobar: 'Information Bar',
   slowcarahead: 'Slow Car Ahead',
   sectordelta: 'Sector Delta',

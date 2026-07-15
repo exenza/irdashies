@@ -23,6 +23,7 @@ import { TwitchChatSettings } from './sections/TwitchChatSettings';
 import { DriverTagsSettings } from './sections/DriverTagsSettings';
 import { KeybindingsSettings } from './sections/KeybindingsSettings';
 import { LapTimeLogSettings } from './sections/LapTimeLogSettings';
+import { FuelSharingSettings } from './sections/FuelSharingSettings';
 import { InformationBarSettings } from './sections/InformationBarSettings';
 import { useDashboard } from '@irdashies/context';
 import { SlowCarAheadSettings } from './sections/SlowCarAheadSettings';
@@ -88,6 +89,8 @@ export const SettingsLoader = ({ previewMode }: SettingsLoaderProps = {}) => {
       return <TwitchChatSettings />;
     case 'laptimelog':
       return <LapTimeLogSettings />;
+    case 'fuelsharing':
+      return <FuelSharingSettings />;
     case 'infobar':
       return <InformationBarSettings />;
     case 'slowcarahead':

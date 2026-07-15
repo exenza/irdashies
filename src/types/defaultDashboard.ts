@@ -1035,6 +1035,36 @@ export const defaultDashboard: {
       },
     },
     {
+      id: 'fuelsharing',
+      enabled: false,
+      layout: {
+        x: 300,
+        y: 400,
+        width: 250,
+        height: 100,
+      },
+      config: {
+        ably: {
+          apiKey: '',
+        },
+        fuelUnits: 'L',
+        scale: 100,
+        background: {
+          opacity: 80,
+        },
+        foreground: {
+          opacity: 70,
+        },
+        sessionVisibility: {
+          race: true,
+          loneQualify: true,
+          openQualify: true,
+          practice: true,
+          offlineTesting: true,
+        },
+      },
+    },
+    {
       id: 'slowcarahead',
       enabled: false,
       layout: {
