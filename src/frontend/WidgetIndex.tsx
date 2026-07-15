@@ -16,6 +16,7 @@ import { Tachometer } from './components/Tachometer/Tachometer';
 import { Flag } from './components/Flag';
 import { TwitchChat } from './components/TwitchChat/TwitchChat';
 import { LapTimeLog } from './components/LapTimeLog/LapTimeLog';
+import { FuelSharing } from './components/FuelSharing/FuelSharing';
 import { InformationBar } from './components/InformationBar/InformationBar';
 import { SlowCarAhead } from './components/SlowCarAhead/SlowCarAhead';
 import { SectorDelta } from './components/SectorDelta/SectorDelta';
@@ -44,6 +45,7 @@ export {
   Flag,
   TwitchChat,
   LapTimeLog,
+  FuelSharing,
   InformationBar,
   SlowCarAhead,
   SectorDelta,
@@ -71,6 +73,7 @@ export const WIDGET_MAP: Record<keyof WidgetConfigMap, ElementType> = {
   flag: Flag,
   twitchchat: TwitchChat,
   laptimelog: LapTimeLog,
+  fuelsharing: FuelSharing,
   infobar: InformationBar,
   slowcarahead: SlowCarAhead,
   sectordelta: SectorDelta,

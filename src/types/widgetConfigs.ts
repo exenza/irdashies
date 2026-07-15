@@ -546,6 +546,18 @@ export interface HeartRateConfig {
   sessionVisibility: SessionVisibilitySettings;
 }
 
+export interface FuelSharingConfig {
+  ably: {
+    /** Team-shared Ably API key (Publish + Subscribe + History capabilities) */
+    apiKey: string;
+  };
+  fuelUnits: 'L' | 'gal';
+  scale: number;
+  background: { opacity: number };
+  foreground: { opacity: number };
+  sessionVisibility: SessionVisibilitySettings;
+}
+
 export interface LapTimeLogConfig {
   showCurrentLap: boolean;
   showPredictedLap: boolean;
@@ -664,6 +676,7 @@ export interface WidgetConfigMap {
   pitlanehelper: PitlaneHelperConfig;
   twitchchat: TwitchChatConfig;
   laptimelog: LapTimeLogConfig;
+  fuelsharing: FuelSharingConfig;
   infobar: InformationBarConfig;
   slowcarahead: SlowCarAheadConfig;
   sectordelta: SectorDeltaConfig;
@@ -764,6 +777,7 @@ export type PitlaneHelperWidgetSettings =
   BaseWidgetSettings<PitlaneHelperConfig>;
 export type TwitchChatWidgetSettings = BaseWidgetSettings<TwitchChatConfig>;
 export type LapTimeLogWidgetSettings = BaseWidgetSettings<LapTimeLogConfig>;
+export type FuelSharingWidgetSettings = BaseWidgetSettings<FuelSharingConfig>;
 export type InformationBarWidgetSettings =
   BaseWidgetSettings<InformationBarConfig>;
 export type SlowCarAheadWidgetSettings = BaseWidgetSettings<SlowCarAheadConfig>;
