@@ -1,0 +1,36 @@
+name: Windows Test Build
+
+# Manual, on-demand build for testing a branch on Windows without touching
+# the project's public GitHub Releases. Run from the Actions tab, choosing
+# the branch to build from the "Use workflow from" dropdown.
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Make (build installer only, no publish)
+        run: npm run make
+
+      - name: Upload installer artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: irdashies-windows-test-build
+          path: out/make/**
+          retention-days: 14
